@@ -2,14 +2,20 @@
   "version": 2,
   "builds": [
     {
-      "src": "app.py",
+      "src": "2.py",
       "use": "@vercel/python"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "app.py"
+      "dest": "2.py"
     }
-  ]
+  ],
+  "functions": {
+    "2.py": {
+      "maxDuration": 60,
+      "memory": 3008
+    }
+  }
 }
